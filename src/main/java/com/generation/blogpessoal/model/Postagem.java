@@ -14,40 +14,49 @@ public class Postagem {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
+	public long id;
 	
 	@NotNull
-	@Size(min = 1 , max = 100, message = "O título tem no mínimo 1 caracter e no máximo 100.")
+	@Size(min = 1 , max = 100) 
 	public String titulo;
 	
 	@NotNull 
-	@Size(min = 10, max = 500)
+	@Size(min = 1, max = 500)
 	public String texto;
+	
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 	public String getTitulo() {
 		return titulo;
 	}
 
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
+
 
 	public String getTexto() {
 		return texto;
 	}
 
+
 	public void setTexto(String texto) {
 		this.texto = texto;
 	}
-	
+
+
+
+
 	
 
 } 
